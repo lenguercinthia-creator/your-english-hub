@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--favicon-->
+    <link rel="shortcut icon" href="./images/favicon-icon.png" type="image/png">
+
+    <!--boostrap styles-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap JS (including Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap 4 (requires jQuery) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--css styles-->
+    <link rel="stylesheet" href="styles.css" />
+
+
+    <title>SRM-MEDICINA FAMILIAR-SERVICIOS</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="img-fluid text-center mt-5 mb-5">
+            <img class="img-fluid" src="./images/logo.png" alt="logo" />
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-12 text-center mt-5 mb-5">
+                
+                <h1 class="services">Reserva de Turnos de Servicios Médicos</h1>
+            </div>
+<div class="col-12 text-center mt-5 mb-5">
+    <img class="image-services" src="./images/servicio.png" alt="servicios" class="img-fluid" width="300px" height="300px" />
+</div>
+
+
+<!--formulario de selección-->
+            <section id="seleccion">
+                <h2>Seleccione su Servicio</h2>
+                <div>
+                    <label>Servicio:</label>
+                    <select id="tipo-servicio">
+                        <option value=""></option>
+                        <option value="consulta">Consulta Médica ($15.000)</option>
+                        <option value="acupuntura">Acupuntura ($30.000)</option>
+                        <option value="dolor">Tratamiento del dolor ($30.000)</option>
+                        <option value="homeopatia">Homeopatía ($20.000)</option>
+                        <option value="obesidad">Obesidad ($20.000)</option>
+                        <option value="cardiologia">Cardiología/ incluye electrocardiograma ($30.000)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Fecha:</label>
+                    <input type="date" id="fecha" min="2025-04-03" required />
+                </div>
+
+                <div>
+                    <label>Nombre del Paciente:</label>
+                    <input type="text" id="nombre" required placeholder="Ej. Juan Pérez"/>
+                </div>
+
+                <div>
+                    <label>Teléfono Celular:</label>
+                    <input type="tel" id="telefono" required placeholder="Ej. 1512345678"/>
+                </div>
+
+                <div>
+                    <label>Hora:</label>
+                    <select id="hora">
+                        <option value=""></option>
+                        <option value="8:00">08:00</option>
+                        <option value="9:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                    </select>
+                </div>
+
+                <div>
+                    <button id="btn-reservar" class="btn btn-primary" type="button">Reservar</button>
+                    <button id="btn-limpiar" class="btn btn-secondary" type="button">Limpiar</button>
+                    </button>
+                </div>
+            </section>
+
+            <!--lista de citas médicas-->
+            <section id="reservas">
+                <h2>Su Lista de Turnos Médicos Reservados</h2>
+                <table id="tabla-citas" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Servicio</th>
+                            <th>Fecha</th>
+                            <th>Nombre</th>
+                            <th>Teléfono</th>
+                            <th>Hora</th>
+                            <th>Costo</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-tabla"></tbody>
+                </table>
+
+                <p>
+                    Total: $<span id="total">0</span>
+                </p>
+
+                <button id="confirmar" class="btn btn-success" type="button">Confirmar Reservas</button>
+
+                </button>
+
+            </section>
+
+        </div>
+
+    
+
+</div>
+    
+    <!--boostrap js styles-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+
+ <!--js code-->
+ <script src="app.js"></script>
+</body>
+</html>

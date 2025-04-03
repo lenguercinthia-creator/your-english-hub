@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.image-services {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   
+}
+
+h2 {
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 20px;
+    color: #2a7285;
+    text-align: center;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.img-fluid {
+    border-radius: 20px;
+    border-width: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: darkslateblue;
+    letter-spacing: 0.5px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#seleccion,
+#reservas {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#seleccion div {
+    margin: 15px 0;
+    padding: 10px;
+}
+
+label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(114, 114, 167);
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+
+select,
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/*estilos para la tabla*/
+
+#tabla-citas {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+}
+
+#tabla-citas th,
+#tabla-citas td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+#tabla-citas th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+    color: #2a7285
+}
+
+#tabla-citas tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#tabla-citas tr:hover {
+    background-color: #e0f7fa;
+}
+
+#tabla-citas .btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Media Queries para Responsive Design */
+@media (max-width: 768px) {
+    .container-fluid {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+
+    .image-services {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    .services {
+        font-size: 40px;
+    }
+
+    select,
+    input,
+    button {
+        font-size: 16px;
+    }
+
+    #tabla-citas th,
+    #tabla-citas td {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services {
+        font-size: 26px;
+    }
+
+    .image-services {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    select,
+    input,
+    button {
+        font-size: 13px;
+    }
+
+    #tabla-citas th,
+    #tabla-citas td {
+        font-size: 13px;
+        padding: 8px;
+        display: block;
+        text-align: left;
+    }
+}

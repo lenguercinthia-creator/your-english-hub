@@ -1,0 +1,116 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* NAV */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    /* mobile */
+    gap: 10px;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 40px 15px;
+    background-color: #f4f4f4;
+}
+
+/* SECCIONES */
+section {
+    padding: 30px 15px;
+    text-align: center;
+}
+
+/* CARDS */
+.cards-container,
+.method-container,
+.pricing-container {
+    display: flex;
+    flex-direction: column;
+    /* mobile */
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.video-container {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* PRICING DESTACADO */
+.recommended {
+    border: 2px solid #007BFF;
+    background-color: #e7f1ff;
+}
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+/* DESKTOP / TABLET */
+/* ---------------- */
+
+@media (min-width: 768px) {
+
+    /* NAV */
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* HERO */
+    .hero {
+        padding: 60px 20px;
+    }
+
+    /* CONTAINERS */
+    .cards-container,
+    .method-container,
+    .pricing-container {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 250px;
+    }
+}
